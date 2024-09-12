@@ -13,7 +13,7 @@ Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    - ![Image/GIF showing the initial display of the number](![image](https://github.com/user-attachments/assets/968f9a61-4339-4224-9eb0-31d07938939c)
+    - ![Image/GIF showing the initial display of the number](src="file:///Users/ahmed/Desktop/NJIT/Lab1%201.png")
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] **User can tap on a button to see the number displayed increase by 1.**
