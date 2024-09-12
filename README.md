@@ -19,8 +19,7 @@ The following **required** functionality is completed:
           
 
 - [ ] **User can tap on a button to see the number displayed increase by 1.**
-   - [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    - ![Image/GIF showing the initial display of the number]
+     - ![Image/GIF showing the number increase on button tap]
     - (<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/712e5181-851e-4b47-8e16-0ae415a8bde9">)
 ) <!-- Replace this link with your actual image/GIF link -->
 
