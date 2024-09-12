@@ -13,12 +13,15 @@ Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    - [ ]  [![Image/GIF showing the initial display of the number]()  <!-- Replace this link with your actual image/GIF link -->
+    - [ ]  [![Image/GIF showing the initial display of the number]
+          (<img width="340" alt="Lab 1 0" src="https://github.com/user-attachments/assets/a806bfb7-feb0-4ffe-ae1c-93ded84b6590">
+)  <!-- Replace this link with your actual image/GIF link -->
           
 
 - [ ] **User can tap on a button to see the number displayed increase by 1.**
    - [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    - ![Image/GIF showing the initial display of the number](<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/712e5181-851e-4b47-8e16-0ae415a8bde9">)
+    - ![Image/GIF showing the initial display of the number]
+    - (<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/712e5181-851e-4b47-8e16-0ae415a8bde9">)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ## Stretch Features
@@ -26,10 +29,13 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 - [ ] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-    - ![Image/GIF showing the upgrade process](file:///Users/ahmed/Desktop/NJIT/Lab1%202.png) <!-- Replace this link with your actual image/GIF link -->
+    - ![Image/GIF showing the upgrade process]
+    - (<img width="339" alt="Lab1 2" src="https://github.com/user-attachments/assets/fc899ac4-2d22-4579-8af6-4526f21670da">) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] User can customize the app's theme (e.g., using a dog background and a paw print button).
-    - ![Image/GIF showing theme customization](file:///Users/ahmed/Desktop/NJIT/Lab%201%200.png) <!-- Replace this link with your actual image/GIF link -->
+    - ![Image/GIF showing theme customization]
+    - (<img width="338" alt="Lab 0" src="https://github.com/user-attachments/assets/3deaa6db-9a99-494c-8c83-4e21afd2b0a0">
+) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] User has progressively difficult goals to reach in terms of number of taps accumulated.
     - ![Image/GIF showing goals and progress](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
