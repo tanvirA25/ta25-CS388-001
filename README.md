@@ -13,7 +13,7 @@ Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    - ![Image/GIF showing the initial display of the number](**https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixlr.com%2Fimage-generator%2F&psig=AOvVaw1JD3Sal2klircWlem-9cuf&ust=1726261349879000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCU9_WmvogDFQAAAAAdAAAAABAE**)
+    - ![Image/GIF showing the initial display of the number](<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/ffe2a66b-1fba-4d36-be21-863b7eb9ba9b">)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] **User can tap on a button to see the number displayed increase by 1.**
