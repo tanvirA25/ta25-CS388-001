@@ -14,13 +14,13 @@ The following **required** functionality is completed:
 
 - [ ] **User can see a number displayed on the screen. The number starts at 0.**
     -[![Image/GIF showing the initial display of the number]
-    -(<img width="340" alt="Lab 1 0" src="https://github.com/user-attachments/assets/a806bfb7-feb0-4ffe-ae1c-93ded84b6590">
+    -(<img width="350" alt="Lab 1 0" src="https://github.com/user-attachments/assets/6d75790e-061c-4e5e-95fe-98b6acc4d1ae">
 )  <!-- Replace this link with your actual image/GIF link -->
           
 
 - [ ] **User can tap on a button to see the number displayed increase by 1.**
      - ![Image/GIF showing the number increase on button tap]
-    - (<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/712e5181-851e-4b47-8e16-0ae415a8bde9">)
+    - (<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/efb08010-3b00-4d2c-a89f-b4d90003bb9c">
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ## Stretch Features
