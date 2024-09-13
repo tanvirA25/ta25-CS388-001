@@ -1,51 +1,43 @@
-# Lab 1: Tap Counter App
+# Android Prework - *Name of App Here*
 
-Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/1#!labs)
+Submitted by: **Your Name Here**
 
-Submitted by: **Tanvir Ahmed** <!-- Replace 'Your Name Here' with your actual name -->
+**Name of your app** is an android app that shows an image and introductory message, and allows pressing a button to display a Toast. 
 
-**Tap Counter App** is an Android app inspired by idle tap games, allowing users to accumulate points through taps, which can be exchanged for upgrades.
-
-Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
+Time spent: **X** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **User can see a number displayed on the screen. The number starts at 0.**
-    -[![Image/GIF showing the initial display of the number]
-    -(<img width="350" alt="Lab 1 0" src="https://github.com/user-attachments/assets/6d75790e-061c-4e5e-95fe-98b6acc4d1ae">
-)  <!-- Replace this link with your actual image/GIF link -->
-          
-
-- [ ] **User can tap on a button to see the number displayed increase by 1.**
-     - ![Image/GIF showing the number increase on button tap]
-    - (<img width="343" alt="Lab1 1" src="https://github.com/user-attachments/assets/efb08010-3b00-4d2c-a89f-b4d90003bb9c">
-) <!-- Replace this link with your actual image/GIF link -->
-
-## Stretch Features
+* [ ] Image and introductory message displayed on screen
+* [ ] Button displayed on screen
+* [ ] Toast with message appears when button is pressed 
 
 The following **optional** features are implemented:
 
-- [ ] User can exchange number of taps accumulated for upgrades (e.g., each tap counts as 2 taps).
-    - ![Image/GIF showing the upgrade process]
-    - (<img width="339" alt="Lab1 2" src="https://github.com/user-attachments/assets/fc899ac4-2d22-4579-8af6-4526f21670da">) <!-- Replace this link with your actual image/GIF link -->
+* [ ] List anything else that you can get done to improve the app functionality!
 
-- [ ] User can customize the app's theme (e.g., using a dog background and a paw print button).
-    - ![Image/GIF showing theme customization]
-    - (<img width="338" alt="Lab 0" src="https://github.com/user-attachments/assets/3deaa6db-9a99-494c-8c83-4e21afd2b0a0">
-) <!-- Replace this link with your actual image/GIF link -->
+## Video Walkthrough
 
-- [ ] User has progressively difficult goals to reach in terms of number of taps accumulated.
-    - ![Image/GIF showing goals and progress](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+Here's a walkthrough of implemented features:
+
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2024] [Tanvir Ahmed]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
