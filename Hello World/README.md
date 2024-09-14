@@ -22,9 +22,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<https://github.com/user-attachments/assets/8e6e51d1-acc5-403f-8b60-55d88dc47485>
-
-title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src = 'https://github.com/user-attachments/assets/8e6e51d1-acc5-403f-8b60-55d88dc47485.gif' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap...  
