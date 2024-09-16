@@ -18,8 +18,9 @@ The following **required** functionality is completed:
   - ![Image/GIF showing the initial display of the number] <img src = 'https://github.com/user-attachments/assets/93aff8a3-e3c3-4040-be84-aad6adac395a' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 ) <!-- Replace this link with your actual image/GIF link -->
 
-- [ ] (2 pts) **User can tap on a button to see the number displayed increase by 1.**  
-  - ![Image/GIF showing the number increase on button tap]() <img src = '' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
+- [x] (2 pts) **User can tap on a button to see the number displayed increase by 1.**  
+  - ![Image/GIF showing the number increase on button tap]() <img src = 'https://github.com/user-attachments/assets/9ea41072-aba6-4291-b9b0-818cbde6cc5d)
+' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Stretch Features
 
