@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textView)
         val goalNum = findViewById<TextView>(R.id.goalNum)
-        var counter: Int = 98
+        var counter: Int = 0
         var goal: Int = 0
         var y: Int = 100
 
