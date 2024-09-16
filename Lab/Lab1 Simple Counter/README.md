@@ -30,19 +30,17 @@ The following **stretch** functionality is implemented:
     - Use a Toast for positive (purchase) or negative (can't afford) notifications.
     - ![Image/GIF showing the upgrade process] <img src = 'https://github.com/user-attachments/assets/a16e9839-c7b6-4221-960a-9b6bd92e01f9' title ='Video Walkthrough' width='' alt='Video Walkthrough' /> <!-- Replace this link with your actual image/GIF link -->
 
-- [ ] (2 pts) **User can exchange taps for a custom icon button.**  
+- [x] (2 pts) **User can exchange taps for a custom icon button.**  
   - X taps for a custom icon button. (Default: 100 taps)
     - Use a Toast for positive (purchase) or negative (can't afford) notifications.
     - ![Image/GIF showing the icon button customization] <img src = 'https://github.com/user-attachments/assets/deebd129-292d-4ad4-8017-31e304b23e16' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-- [ ] (2 pts) **User can customize the app's theme (e.g., a dog-themed background with a paw print button).**  
-  - ![Image/GIF showing theme customization](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-
-- [ ] (+2 bonus pts) **User has progressively difficult goals to reach in terms of the number of taps accumulated.**  
+- [x] (2 pts) **User can customize the app's theme (e.g., a dog-themed background with a paw print button).**  
+  - ![Image/GIF showing theme customization] <img src = 'https://github.com/user-attachments/assets/93aff8a3-e3c3-4040-be84-aad6adac395a' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
+- [x] (+2 bonus pts) **User has progressively difficult goals to reach in terms of the number of taps accumulated.**  
   - Display each goal on the screen, and track the total number of goals reached.
   - Use a Toast to notify of a reached goal.
-  - ![Image/GIF showing goals and progress](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
-
+  - ![Image/GIF showing goals and progress]<img src = 'https://github.com/user-attachments/assets/decfedfe-ab4b-4a8c-803e-1d12f072b747' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 ## Notes
 
 Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
