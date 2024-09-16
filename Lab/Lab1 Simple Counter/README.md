@@ -15,11 +15,11 @@ Time spent: **X** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [ ] (2 pts) **User can see a number displayed on the screen. The number starts at 0.**  
-  - ![Image/GIF showing the initial display of the number] <img src = 'https://github.com/user-attachments/assets/93aff8a3-e3c3-4040-be84-aad6adac395a' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
+  - ![x] <img src = 'https://github.com/user-attachments/assets/93aff8a3-e3c3-4040-be84-aad6adac395a' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] (2 pts) **User can tap on a button to see the number displayed increase by 1.**  
-  - ![Image/GIF showing the number increase on button tap]() <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing the number increase on button tap]() <img src = '' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Stretch Features
 
