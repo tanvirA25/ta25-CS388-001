@@ -19,7 +19,7 @@ The following **required** functionality is completed:
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [x] (2 pts) **User can tap on a button to see the number displayed increase by 1.**  
-  - ![Image/GIF showing the number increase on button tap]() <img src = 'https://github.com/user-attachments/assets/9ea41072-aba6-4291-b9b0-818cbde6cc5d)
+  - ![Image/GIF showing the number increase on button tap] <img src = 'https://github.com/user-attachments/assets/9ea41072-aba6-4291-b9b0-818cbde6cc5d)
 ' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ### Stretch Features
