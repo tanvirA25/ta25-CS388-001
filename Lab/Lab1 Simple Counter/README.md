@@ -25,11 +25,10 @@ The following **required** functionality is completed:
 
 The following **stretch** functionality is implemented:
 
-- [ ] (2 pts) **User can exchange the number of taps accumulated for upgrades:**
+- [x] (2 pts) **User can exchange the number of taps accumulated for upgrades:**
   - X taps for an upgrade that makes each tap count as 2 taps. (Default: 100 taps)
     - Use a Toast for positive (purchase) or negative (can't afford) notifications.
-    - ![Image/GIF showing the upgrade process] <img src = 'https://github.com/user-attachments/assets/a16e9839-c7b6-4221-960a-9b6bd92e01f9
-' title ='Video Walkthrough' width='' alt='Video Walkthrough' /> <!-- Replace this link with your actual image/GIF link -->
+    - ![Image/GIF showing the upgrade process] <img src = 'https://github.com/user-attachments/assets/a16e9839-c7b6-4221-960a-9b6bd92e01f9' title ='Video Walkthrough' width='' alt='Video Walkthrough' /> <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] (2 pts) **User can exchange taps for a custom icon button.**  
   - X taps for a custom icon button. (Default: 100 taps)
