@@ -36,7 +36,7 @@ The following **stretch** functionality is implemented:
     - ![Image/GIF showing the icon button customization] <img src = 'https://github.com/user-attachments/assets/deebd129-292d-4ad4-8017-31e304b23e16' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 - [x] (2 pts) **User can customize the app's theme (e.g., a dog-themed background with a paw print button).**  
-  - ![Image/GIF showing theme customization] <img src = 'https://github.com/user-attachments/assets/93aff8a3-e3c3-4040-be84-aad6adac395a' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
+  - ![Image/GIF showing theme customization] <img src = 'https://github.com/user-attachments/assets/f1ba98e3-8be4-450d-bd0c-82beadd11dd1' title ='Video Walkthrough' width='' alt='Video Walkthrough' />
 - [x] (+2 bonus pts) **User has progressively difficult goals to reach in terms of the number of taps accumulated.**  
   - Display each goal on the screen, and track the total number of goals reached.
   - Use a Toast to notify of a reached goal.
