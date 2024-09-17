@@ -62,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                         upgradeButton.setOnClickListener {
                             Toast.makeText(it.context, "Taps Upgraded by 2", Toast.LENGTH_SHORT)
                                 .show()
+                                button.text = "ADD 2"
 
                             button.setOnClickListener {
 
