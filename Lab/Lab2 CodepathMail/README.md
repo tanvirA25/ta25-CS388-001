@@ -19,19 +19,22 @@ The following **required** functionality is completed:
     - Sender
     - Email title
     - Email summary
-  - ![Image/GIF showing the basic email list display] <img src='https://github.com/user-attachments/assets/0cfcda17-0694-4750-a6e6-60a57378eb7c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  - ![Image/GIF showing the basic email list display]
+  - <img src='https://github.com/user-attachments/assets/0cfcda17-0694-4750-a6e6-60a57378eb7c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ### Stretch Features
 
 The following **stretch** functionality is implemented:
 
 - [x] (3 pts) **User can press a 'Load More' button to see the next 5 emails displayed.**
-  - ![Image/GIF showing the 'Load More' button in action] <img src='https://github.com/user-attachments/assets/83ca19fe-9bf6-4b6b-a664-f59e527db003' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  - ![Image/GIF showing the 'Load More' button in action]
+  - <img src='https://github.com/user-attachments/assets/83ca19fe-9bf6-4b6b-a664-f59e527db003' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 - [x] (3 pts) **Each email displays additional information:**
   - Picture of the sender
   - Email sent date
   - Bolded information if the email is unread
-  - ![Image/GIF showing additional email information] <img src='https://github.com/user-attachments/assets/d640c254-6165-4900-a80f-5dfcc8b56d1c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+  - ![Image/GIF showing additional email information]
+  - <img src='https://github.com/user-attachments/assets/d640c254-6165-4900-a80f-5dfcc8b56d1c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ## Notes
 
 Describe any challenges encountered while building the app. <!-- Replace this with your specific challenges and experiences -->
