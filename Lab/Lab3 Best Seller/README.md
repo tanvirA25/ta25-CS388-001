@@ -48,7 +48,7 @@ Describe any challenges encountered while building the app. <!-- Replace this wi
 ## License
 
 ```plaintext
-    Copyright [yyyy] [Your Name]
+    Copyright [2024] [Tanvri Ahmed]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
