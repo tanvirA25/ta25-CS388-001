@@ -28,9 +28,10 @@ The following **required** functionality is completed:
 
 The following **stretch** functionality is implemented:
 
-- [ ] (4 pts) **Improved layout and styling to match the NY Times website.**
+- [X] (4 pts) **Improved layout and styling to match the NY Times website.**
   - Includes a "buy" button that links to Amazon.
-  - ![Image/GIF showing stretch features](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+  - ![Image/GIF showing stretch features](https://github.com/user-attachments/assets/4b8e075a-04f8-4d57-b9a0-9e5cc3262fbd)
+) <!-- Replace this link with your actual image/GIF link -->
 
 ## Notes
 
