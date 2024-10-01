@@ -20,7 +20,8 @@ The following **required** functionality is completed:
 - [x] (4 pts) **Books are displayed using a RecyclerView.**
   - Displays book ranking, cover, title, author, and description.
   - Book cover images are downloaded using Glide.
-  - ![Image/GIF showing required features](https://github.com/user-attachments/assets/d9ebec8f-89b3-42bb-ace6-e055f4e38f49)
+  - ![Image/GIF showing required features](https://github.com/user-attachments/assets/9013d436-016f-4620-9710-c170385e363b)
+)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ### Stretch Features
