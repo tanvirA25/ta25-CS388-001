@@ -34,10 +34,10 @@ Here's a walkthrough of implemented user stories:
 
 <img src= 'https://github.com/user-attachments/assets/f72ffe3a-64d6-4ce9-a142-4a98664cb7ef'/>
 
-<!-- Replace this with whatever GIF tool you used! -->
+<!-- Replace this with whatever GIF tool you used! --> 
 GIF created with ...  
-<!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
+
 
 ## Notes
 
