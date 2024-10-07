@@ -1,10 +1,10 @@
-# Android Project 3 - *Name of App Here*
+# Android Project 3 - *FlixterPlus*
 
-Submitted by: **Your Name Here**
+Submitted by: **Tanvir Ahmed**
 
-**Name of your app** is a movie browsing app that allows users to browse movies currently playing in theaters.
+**FlixterPlus** is a movie browsing app that allows users to browse movies currently playing in theaters.
 
-Time spent: **X** hours spent in total
+Time spent: **2** hours spent in total
 
 ## Required Features
 
@@ -21,6 +21,8 @@ The following **optional** features are implemented:
   - App should neatly arrange data in both landscape and portrait mode
 - [X] Implement Glide to display placeholder graphics during loading
   - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
+  <img src='https://github.com/user-attachments/assets/78bea10d-b8dc-43ee-b2df-4373f0cccb4d'/>
+
 
 The following **additional** features are implemented:
 
