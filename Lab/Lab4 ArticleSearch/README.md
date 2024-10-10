@@ -15,7 +15,7 @@ Time spent: **X** hours spent in total <!-- Replace 'X' with the number of hours
 The following **required** functionality is completed:
 
 - [x] (3 pts) **Articles are displayed using the RecyclerView.**
-  - ![Image/GIF showing RecyclerView implementation]("https://github.com/user-attachments/assets/e9e1ad60-f4fa-4eaf-b4bc-4f643484dbbf")
+  - ![Image/GIF showing RecyclerView implementation](https://github.com/user-attachments/assets/e9e1ad60-f4fa-4eaf-b4bc-4f643484dbbf)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [ ] (4 pts) **Can navigate to the Article Details screen.**
