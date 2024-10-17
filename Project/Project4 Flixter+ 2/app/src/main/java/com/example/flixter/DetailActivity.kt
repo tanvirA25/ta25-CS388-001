@@ -16,6 +16,8 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
 import org.json.JSONArray
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 
 private const val TAG = "DetailActivity"
 
@@ -52,6 +54,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     vote.text = "Average Vote "+movies.vote
     Glide.with(this)
         .load("https://image.tmdb.org/t/p/w500/"+movies.movieImageUrl)
+         .apply(RequestOptions().transform(RoundedCorners(20)))
         .into(image)
 
 
