@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 
 class UpComingAdapter(
     private val context : Context,
@@ -46,7 +48,7 @@ class UpComingAdapter(
         Glide.with(holder.mView)
             .load("https://image.tmdb.org/t/p/w500/"+upcoming.movieImageUrl)
             .placeholder(R.drawable.movies)
-            .centerCrop()
+            .apply(RequestOptions().transform(RoundedCorners(20)))
             .into(holder.mMovieImage)
 
         holder.mView.setOnClickListener {
