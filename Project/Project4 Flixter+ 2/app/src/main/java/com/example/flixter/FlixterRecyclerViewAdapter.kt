@@ -11,6 +11,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 
 const val MOVIE_EXTRA = "MOVIE_EXTRA"
     class FlixterRecyclerViewAdapter(
@@ -47,7 +49,7 @@ const val MOVIE_EXTRA = "MOVIE_EXTRA"
             Glide.with(holder.mView)
                 .load("https://image.tmdb.org/t/p/w500/"+movie.movieImageUrl)
                 .placeholder(R.drawable.movies)
-                .centerCrop()
+                .apply(RequestOptions().transform(RoundedCorners(20)))
                 .into(holder.mMovieImage)
 
             holder.mView.setOnClickListener {
