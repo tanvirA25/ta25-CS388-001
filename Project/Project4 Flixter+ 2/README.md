@@ -1,28 +1,26 @@
-# Android Project 3 - *FlixterPlus*
+# Android Project 4 - Flixter++*
 
 Submitted by: **Tanvir Ahmed**
 
-**FlixterPlus** is a movie browsing app that allows users to browse movies currently playing in theaters.
+**Flixter++** is a movie browsing app that allows users to browse ... [TODO] 
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
-- [X] **Parse through JSON data and implement a RecyclerView to display all movies**
-- [X] **Use Glide to load and display movie poster images**
+- [X] **Choose any endpoint on The MovieDB API except `now_playing`**
+  - Chosen Endpoint: `[TODO: FILL ME IN TO GET CREDIT]`
+- [X] **Make a request to your chosen endpoint and implement a RecyclerView to display all entries**
+- [X] **Use Glide to load and display at least one image per entry**
+- [X] **Click on an entry to view specific details about that entry using Intents**
 
 The following **optional** features are implemented:
 
-- [X] Improve and customize the user interface through styling and coloring
-- [X] Implement orientation responsivity
-  - App should neatly arrange data in both landscape and portrait mode
-- [X] Implement Glide to display placeholder graphics during loading
-  - Note: this feature is difficult to capture in a GIF without throttling internet speeds.  Instead, include an additional screencap of your Glide code implementing the feature.  (<10 lines of code)
-  <img src='https://github.com/user-attachments/assets/78bea10d-b8dc-43ee-b2df-4373f0cccb4d'/>
-
+- [X] **Add another API call and RecyclerView that lets the user interact with different data.** 
+- [X] **Add rounded corners to the images using the Glide transformations**
+- [ ] **Implement a shared element transition when user clicks into the details of a movie**
 
 The following **additional** features are implemented:
 
@@ -32,12 +30,12 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src= 'https://github.com/user-attachments/assets/f72ffe3a-64d6-4ce9-a142-4a98664cb7ef'/>
+<img src='https://github.com/user-attachments/assets/410e42cf-49ff-480d-8e8e-7665b2372044' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! --> 
+<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+<!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
-
 
 ## Notes
 
