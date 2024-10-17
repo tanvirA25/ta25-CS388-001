@@ -1,6 +1,5 @@
 package com.example.flixter
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,7 +17,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
 import org.json.JSONArray
-import org.json.JSONObject
+
 
 
 
