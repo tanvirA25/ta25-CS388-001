@@ -1,4 +1,4 @@
-# Android Project 4 - Flixter++*
+# Android Project 4 - Flixter++
 
 Submitted by: **Tanvir Ahmed**
 
