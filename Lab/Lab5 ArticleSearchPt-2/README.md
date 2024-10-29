@@ -22,7 +22,7 @@ The following **required** functionality is completed:
 ) <!-- Replace this link with your actual image/GIF link -->
 
 - [X] (2 pts) **If user turns on airplane mode and closes and reopens app, old data from the database should be loaded**
-  - ![GIF showing offline mode functionality](https://github.com/user-attachments/assets/b125a742-139e-4287-a527-7670c2f778bd)
+  - ![GIF showing offline mode functionality](https://github.com/user-attachments/assets/29e1e811-0cf8-4562-bcd1-2c4c7cd657a8)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ### Stretch Features
