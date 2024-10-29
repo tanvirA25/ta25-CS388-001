@@ -1,12 +1,12 @@
-# Lab 4: Article Search
+# Lab 5: ArticleSearch Pt 2
 
-Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/4#!labs)
+Course Link: [CodePath Android Course](https://courses.codepath.org/courses/and102/unit/5#!labs)
 
-Submitted by: **Tavnir Ahmed** <!-- Replace 'Your Name Here' with your actual name -->
+Submitted by: **Tanvir Ahmed** <!-- Replace 'Your Name Here' with your actual name -->
 
-**Article Search** is an app designed to display the most recent articles from the NY Times.
+**NYT Article Search Pt 2** is an app designed to maintain functionality while offline by caching the latest data fetched from the NYT API, ensuring a smooth user experience even without network connectivity.
 
-Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
+Time spent: **4** hours spent in total <!-- Replace 'X' with the number of hours you spent on this project -->
 
 ## Application Features
 
@@ -14,24 +14,34 @@ Time spent: **2** hours spent in total <!-- Replace 'X' with the number of hours
 
 The following **required** functionality is completed:
 
-- [x] (3 pts) **Articles are displayed using the RecyclerView.**
-  - ![Image/GIF showing RecyclerView implementation](https://github.com/user-attachments/assets/e9e1ad60-f4fa-4eaf-b4bc-4f643484dbbf)
+- [X] (2 pts) **Most recently fetched data is stored locally in a database**
+  - The app should cache the latest articles fetched from the NYT API in a local SQLite database using Room.
+  - If the user has fetched data recently, those articles should be available offline.
+  - Ensure old cached data is properly replaced with new data upon successful network fetches.
+  - ![GIF showing database caching functionality](https://github.com/user-attachments/assets/a43d8e9a-6f53-4c4c-b36f-0a4060bd90bf)
 ) <!-- Replace this link with your actual image/GIF link -->
 
-- [X] (4 pts) **Can navigate to the Article Details screen.**
-  - ![Image/GIF showing Article Details screen](https://github.com/user-attachments/assets/f0b2a0fd-8f25-464d-9782-b8a044f2ab57)
-) <!-- Replace this link with your actual image/GIF link -->
-
-- [x] (3 pts) **Article images are downloaded and displayed using Glide.**
-  - ![Image/GIF showing Glide usage](https://github.com/user-attachments/assets/c89d113a-6fbd-46c5-973e-85bee90d6ece)
+- [X] (2 pts) **If user turns on airplane mode and closes and reopens app, old data from the database should be loaded**
+  - ![GIF showing offline mode functionality](https://github.com/user-attachments/assets/b125a742-139e-4287-a527-7670c2f778bd)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ### Stretch Features
 
 The following **stretch** functionality is implemented:
 
-- [X] (+2 pts bonus) **Enhanced the UI for the application with customized fonts and ConstraintLayout for each of the screens.**
-  - ![Image/GIF showing custom UI styling](https://github.com/user-attachments/assets/0cab4520-ba9d-4880-a2cc-f0026176e601)
+- [X] (2 pts) **Add Swipe To Refresh to force a new network call to get new data**
+  - ![GIF showing Swipe to Refresh](https://github.com/user-attachments/assets/68eb18c7-e447-4f9e-9c15-b6707fbbe002)
+) <!-- Replace this link with your actual image/GIF link -->
+
+- [X] (2 pts) **Add setting toggle for user to create preference for caching data or not (Using Shared Preferences)**
+  - ![GIF showing Shared Preferences for caching](https://github.com/user-attachments/assets/b8d95fa0-8577-42a5-a6ac-0904bddcbd7c)
+) <!-- Replace this link with your actual image/GIF link -->
+
+- [ ] (+3 pts) **Implement a Search UI to filter current RecyclerView entries or fetch data from the search API with query**
+  - ![GIF showing Search UI functionality](http://i.imgur.com/link/to/your/gif/file.gif) <!-- Replace this link with your actual image/GIF link -->
+
+- [X] (2 pts) **Listen to network connectivity changes and create a UI to let people know they are offline and automatically reload new data if connectivity returns**
+  - ![GIF showing network connectivity detection](https://github.com/user-attachments/assets/4b49e38f-c3e1-4862-8e55-b5f7463c89eb)
 ) <!-- Replace this link with your actual image/GIF link -->
 
 ## Notes
@@ -40,10 +50,12 @@ Describe any challenges encountered while building the app. <!-- Replace this wi
 
 ## Resources
 
-- [Using Intents to Create Flows](https://guides.codepath.org/android/Using-Intents-to-Create-Flows)
-- [AsyncHTTPClient](https://guides.codepath.org/android/Using-CodePath-Async-Http-Client)
-- [GridLayoutManager](https://developer.android.com/reference/kotlin/androidx/recyclerview/widget/GridLayoutManager)
-- [GridView in Android](https://www.geeksforgeeks.org/gridview-in-android-with-example/)
+- [Data storage with Room](https://developer.android.com/training/data-storage/room)
+- [Swipe To Refresh](https://developer.android.com/training/swipe/add-swipe-interface)
+- [Save key-value data with Shared Preferences](https://developer.android.com/training/data-storage/shared-preferences)
+- [Android Search View](https://developer.android.com/reference/android/widget/SearchView)
+- [Monitor connectivity status and connection metering](https://developer.android.com/training/monitoring-device-state/connectivity-status-type)
+- [Kotlin Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
 
 ## License
 
