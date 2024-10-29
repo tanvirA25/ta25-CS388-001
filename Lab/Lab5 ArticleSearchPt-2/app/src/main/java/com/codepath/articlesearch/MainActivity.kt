@@ -71,22 +71,25 @@ class MainActivity : AppCompatActivity() {
             articlesRecyclerView.addItemDecoration(dividerItemDecoration)
         }
 
-        dbToggle()
+        dbToggle(articleAdapter)
         swipe()
         getConnection(articleAdapter)
     }
 
     // checks database toggle setting
-    private fun dbToggle(){
+    private fun dbToggle(articleAdapter: ArticleAdapter){
         val isCached = sharedPreferences.getBoolean(KEY_CACHE_DATA, true)
         dbstatus.isChecked = isCached
 
         dbstatus.setOnCheckedChangeListener { _, isChecked->
-            if (!isChecked){
-                lifecycleScope.launch(IO) {
-                    (application as ArticleApplication).db.articleDao().deleteAll()
+            if(connection.isOnline()){
+                if (!isChecked) {
+                    loadArticleFromNetwork(articleAdapter, db = false)
                 }
-
+            }
+                    lifecycleScope.launch(IO) {
+                        (application as ArticleApplication).db.articleDao().deleteAll()
+                
             }
 
         }
@@ -94,11 +97,11 @@ class MainActivity : AppCompatActivity() {
         // checks network connection and loads from network or database
         private fun getConnection(articleAdapter: ArticleAdapter){
             dbstatus.isChecked = sharedPreferences.getBoolean(KEY_CACHE_DATA, true)
-        connection = NetworkConnection(this) { isOnline ->
+            connection = NetworkConnection(this) { isOnline ->
+                runOnUiThread{
             if (isOnline) {
                 offlineIcon.visibility = TextView.INVISIBLE
-                loadArticleFromNetwork(articleAdapter, db = dbstatus.isChecked)
-
+                loadArticleFromNetwork(articleAdapter, dbstatus.isChecked)
             }
             else {
                 offlineIcon.visibility = TextView.VISIBLE
@@ -111,6 +114,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
+                }
         connection.startMonitoring()
     }
     // loads from database
@@ -133,7 +137,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
         // loads from network if no database else loads from database
-        fun loadArticleFromNetwork(articleAdapter: ArticleAdapter, db: Boolean = true) {
+        fun loadArticleFromNetwork(articleAdapter: ArticleAdapter, db: Boolean) {
             val client = AsyncHttpClient()
             client.get(ARTICLE_SEARCH_URL, object : JsonHttpResponseHandler() {
                 override fun onFailure(
