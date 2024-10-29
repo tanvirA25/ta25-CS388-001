@@ -76,45 +76,52 @@ class MainActivity : AppCompatActivity() {
         getConnection(articleAdapter)
     }
 
-    // checks database toggle setting
+     // checks database toggle setting
     private fun dbToggle(articleAdapter: ArticleAdapter){
         val isCached = sharedPreferences.getBoolean(KEY_CACHE_DATA, true)
         dbstatus.isChecked = isCached
-
         dbstatus.setOnCheckedChangeListener { _, isChecked->
-            if(connection.isOnline()){
-                if (!isChecked) {
-                    loadArticleFromNetwork(articleAdapter, db = false)
+            if (connection.isOnline()){
+                if(!dbstatus.isChecked){
+                    loadArticleFromNetwork(articleAdapter, false)
+                    lifecycleScope.launch(IO) {
+                        Log.d(TAG, "Deleting database...")
+                        (application as ArticleApplication).db.articleDao().deleteAll()
+                        Log.d(TAG, "Database deleted.")
+
+                    }
                 }
             }
-                    lifecycleScope.launch(IO) {
-                        (application as ArticleApplication).db.articleDao().deleteAll()
-                
-            }
+            if (!dbstatus.isChecked && !connection.isOnline()){
+                lifecycleScope.launch(IO) {
+                    Log.d(TAG, "Deleting database...")
+                    (application as ArticleApplication).db.articleDao().deleteAll()
+                    Log.d(TAG, "Database deleted.")
 
+                }
+
+            }
         }
     }
-        // checks network connection and loads from network or database
-        private fun getConnection(articleAdapter: ArticleAdapter){
-            dbstatus.isChecked = sharedPreferences.getBoolean(KEY_CACHE_DATA, true)
-            connection = NetworkConnection(this) { isOnline ->
-                runOnUiThread{
+    // checks network connection and loads from network or database
+    private fun getConnection(articleAdapter: ArticleAdapter) {
+        dbstatus.isChecked = sharedPreferences.getBoolean(KEY_CACHE_DATA, true)
+        connection = NetworkConnection(this) { isOnline ->
             if (isOnline) {
                 offlineIcon.visibility = TextView.INVISIBLE
-                loadArticleFromNetwork(articleAdapter, dbstatus.isChecked)
-            }
-            else {
-                offlineIcon.visibility = TextView.VISIBLE
-                if (sharedPreferences.getBoolean(KEY_CACHE_DATA, true)){
-                    loadArticlesFromDatabase(articleAdapter)
+                // Only load from network if caching is enabled
+                if (sharedPreferences.getBoolean(KEY_CACHE_DATA, true)) {
+                    loadArticleFromNetwork(articleAdapter, db = true)
                 }
-                else{
+            } else {
+                offlineIcon.visibility = TextView.VISIBLE
+                if (sharedPreferences.getBoolean(KEY_CACHE_DATA, true)) {
+                    loadArticlesFromDatabase(articleAdapter)
+                } else {
                     Toast.makeText(this, "There is no database", Toast.LENGTH_SHORT).show()
                 }
-
             }
         }
-                }
         connection.startMonitoring()
     }
     // loads from database
