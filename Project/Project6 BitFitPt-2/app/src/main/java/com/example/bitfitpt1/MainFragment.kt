@@ -35,7 +35,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             lifecycleScope.launch {
                 (requireActivity().application as ItemApplication).db.itemDao().getAllItems().collect {databaseList ->
                     val items = databaseList.map { entity ->
-                        Item(entity.name, entity.calorie, entity.date)
+                        Item(entity.id, entity.name, entity.calorie, entity.date)
 
                     }
                     itemList.clear()
@@ -54,8 +54,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             lifecycleScope.launch {
                 (requireActivity().application as ItemApplication).db.itemDao().delete(item.toEntity())
                 itemList.remove(item)
-                Toast.makeText(requireContext(), "Item deleted", Toast.LENGTH_SHORT).show()
                 adapter.notifyDataSetChanged()
+                Toast.makeText(requireContext(), "Item deleted", Toast.LENGTH_SHORT).show()
+
             }
         }
 
