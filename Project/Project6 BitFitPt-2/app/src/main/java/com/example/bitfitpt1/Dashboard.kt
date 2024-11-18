@@ -43,7 +43,7 @@ class Dashboard : Fragment(R.layout.dashboard) {
                 .collect { databaseList ->
                     // Map database entities to Items
                     val items = databaseList.map { entity ->
-                        Item(entity.name, entity.calorie, entity.date)
+                        Item(entity.id, entity.name, entity.calorie, entity.date)
                     }
 
                     liveData(items)

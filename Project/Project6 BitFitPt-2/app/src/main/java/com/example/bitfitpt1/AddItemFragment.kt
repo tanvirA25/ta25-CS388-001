@@ -1,5 +1,6 @@
 package com.example.bitfitpt1
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
 import android.view.View
@@ -50,6 +51,7 @@ class AddItemFragment : Fragment(R.layout.add_item) {
                     withContext(Dispatchers.Main) {
                         Toast.makeText(requireContext(), "Item added", Toast.LENGTH_SHORT).show()
                         parentFragmentManager.popBackStack()
+
                     }
                 }
                     }
