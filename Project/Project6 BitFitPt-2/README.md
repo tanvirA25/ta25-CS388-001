@@ -1,42 +1,42 @@
-# Android Project 5 - *BitFit*
+# Android Project 6 - *BitFitPt2*
 
 Submitted by: **Tanvir Ahmed**
 
-**BitFit** is a health metrics app that allows users to track ... Meal Calorie
+**BitFitPt2** is a health metrics app that allows users to track ... [TODO] 
 
-Time spent: **3** hours spent in total
+Time spent: **4** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [X] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): `[TODO: FILL ME IN TO GET CREDIT]`
-- [X] **There is a "create entry" UI that prompts users to make their daily entry**
-- [X] **New entries are saved in a database and then updated in the RecyclerView**
-- [X] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
- 
+- [X] **Use at least 2 Fragments**
+- [X] **Create a new dashboard fragment where users can see a summary of their entered data**
+- [X] **Use one of the Navigation UI Views (BottomNavigation, Drawer Layout, Top Bar) to move between the fragments**
+
 The following **optional** features are implemented:
 
-- [X] **Create a UI for tracking averages and trends in metrics**
-- [X] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [X] **Add a more advanced UI (e.g: Graphing) for tracking trends in metrics**
+- [ ] **Implement daily notifications to prompt users to fill in their data**
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
+- [X] **Add a delete button to delete entry**
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/user-attachments/assets/8a5f61cb-8f14-4198-bd9d-9a85d22197d7'
- title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/user-attachments/assets/13829467-f6f4-4189-865a-f64780d5fc6d)
+' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
+<!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
@@ -44,7 +44,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [2024] [Tanvir Ahmed]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
