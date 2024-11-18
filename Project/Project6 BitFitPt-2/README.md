@@ -28,7 +28,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://github.com/user-attachments/assets/13829467-f6f4-4189-865a-f64780d5fc6d)
+<img src='https://github.com/user-attachments/assets/13829467-f6f4-4189-865a-f64780d5fc6d
 ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
