@@ -23,7 +23,7 @@ The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
 - [X] **Add a delete button to delete entry**
-      <img src='https://github.com/user-attachments/assets/248eb159-306b-4e90-b8ff-2d56036be29c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+- <img src='https://github.com/user-attachments/assets/248eb159-306b-4e90-b8ff-2d56036be29c' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 ## Video Walkthrough
 
