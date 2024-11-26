@@ -176,7 +176,9 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
   - Navigate to Wishlist (optional)
 
 ## Wireframes
-    - ![image](https://hackmd.io/_uploads/HJkhs6GmJl.png)
+   <img width="474" alt="image" src="https://github.com/user-attachments/assets/39d81d29-0837-4e9b-81d5-03c8af03baef">
+
+
 
 
 
