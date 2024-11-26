@@ -108,7 +108,7 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
     - As a user I want to login if I have an account
     - As a user I want to create an account if I don't have it
     - As a user I want to use it as a guest
-- All time Page
+- All time Page (optional)
     - As a use I want to view highest rated content of all time
 
 ### 3. Navigation
