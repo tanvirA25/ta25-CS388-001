@@ -176,7 +176,8 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
   - Navigate to Wishlist (optional)
 
 ## Wireframes
-   <img width="1219" alt="image" src="https://github.com/user-attachments/assets/217e0eac-183c-421c-b440-2968ba775838">
+   <img width="1219" alt="389791289-217e0eac-183c-421c-b440-2968ba775838" src="https://github.com/user-attachments/assets/bfcf0214-5b5a-42af-8384-7087fa2eb65a">
+
 
 
 
