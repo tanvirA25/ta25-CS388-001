@@ -62,7 +62,8 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
     - [ ] Options to change password, email, and info.
     - [ ] Settings options to change notifications, and age restriction.
 5. Login Page
-    - [ ] User can login or create an account if not
+    - [ ] User can login
+    - [ ] User can create an account 
     - [ ] User can also use as guest
 
 **Optional Features**
