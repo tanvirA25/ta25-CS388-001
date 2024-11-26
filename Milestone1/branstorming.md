@@ -135,25 +135,25 @@
 
     
 ## Netflix for Trailers
-   - [x] User can create an account
-   - [X] User can login
-   - [X] Use can use it as a guest
-   - [X] User can view the trailers in the following navigation pages
+   - [] User can create an account
+   - [] User can login
+   - [] Use can use it as a guest
+   - [] User can view the trailers in the following navigation pages
        - Trending Page (Also Home Page) shows the latest movies in theater
            - There will be seperate option to view trailers of tv shows
            - It will include the trailer to view in a video layout, Name of the content, director, writer, actors, ranking, rating, and where it can be watched
-           - [x] User can add the movie / shows to their watch list to watch when it comes to theater or vod (Only for Members)
+           - [] User can add the movie / shows to their watch list to watch when it comes to theater or vod (Only for Members)
        - Upcoming Page shows the upcoming trailers
            - There will be seperate option for tv shows 
            - It will include the trailer to view in a video layout, Name of the content, director, writer, actors, ranking, rating, and where it can be watched
-          - [x] User can add the movie / shows to their watch list to watch when it comes to theater or vod (Only for Members)
+          - [] User can add the movie / shows to their watch list to watch when it comes to theater or vod (Only for Members)
         - Page for highest rated ranking of all time (optional)
             - It will include the trailers and rest of the info like the other pages
         - Page to search for a movie / tv shows
-            - [x] User can filter by name, genre, year, actor and director
+            - [] User can filter by name, genre, year, actor and director
         - Account Page
-            - [x] User can change and view account details
-            - [X] Settings toggle for notificaiton and age restriction
+            - [] User can change and view account details
+            - [] Settings toggle for notificaiton and age restriction
             
             
     
