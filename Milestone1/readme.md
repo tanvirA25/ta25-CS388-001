@@ -10,7 +10,7 @@
 
 ### Description
 
-- An an dedicated to show move and tv shows trailers with the additon of filtered search and showcasing of trending and upcoming contents.
+- A dedicated app to show move and tv shows trailers with the additon of filtered search and showcasing of trending and upcoming contents.
 
 ### App Evaluation
 
