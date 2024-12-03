@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TrailFlix</string>
+    <string name="checkBox1">Keep me logged in</string>
+</resources>
