@@ -186,7 +186,7 @@ GitHub Project board
 [Add screenshot of your Project Board with three milestones visible in this section] 
 <img width="1352" alt="Screenshot at Dec 02 22-06-15" src="https://github.com/user-attachments/assets/775de35c-0b1d-48da-8ef2-e4d4ca5ee2ca">
 
-Issue cards
+# Issue cards
 [Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
 <img width="1443" alt="image" src="https://github.com/user-attachments/assets/19b3aebe-0fc5-4cb2-a011-1a9054365a7e">
 
@@ -197,7 +197,7 @@ Issue cards
 <img width="1614" alt="image" src="https://github.com/user-attachments/assets/4b8023ae-459c-4bcb-9732-7009e3dcf540">
 
 
-Issues worked on this sprint
+# Issues worked on this sprint
 List the issues you completed this sprint
 - [X] User can view the login page
 - [X] User can also login as guest
