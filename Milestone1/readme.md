@@ -65,7 +65,7 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
     - [ ] User can view the login page
     - [ ] User can login
     - [ ] User can create an account 
-    - [ ] User can also use as guest
+    - [ ] User can also login as guest
 
 **Optional Features**
 
@@ -181,6 +181,27 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
    <img width="1219" alt="389791289-217e0eac-183c-421c-b440-2968ba775838" src="https://github.com/user-attachments/assets/bfcf0214-5b5a-42af-8384-7087fa2eb65a">
 
 
+# Milestone 2 - Build Sprint 1 (Unit 8)
+GitHub Project board
+[Add screenshot of your Project Board with three milestones visible in this section] 
+<img width="1352" alt="Screenshot at Dec 02 22-06-15" src="https://github.com/user-attachments/assets/775de35c-0b1d-48da-8ef2-e4d4ca5ee2ca">
+
+Issue cards
+[Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
+<img width="1443" alt="image" src="https://github.com/user-attachments/assets/19b3aebe-0fc5-4cb2-a011-1a9054365a7e">
+
+
+[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
+<img width="1434" alt="image" src="https://github.com/user-attachments/assets/0e963400-000b-4cda-b29c-866afe2b6402">
+<img width="1426" alt="image" src="https://github.com/user-attachments/assets/c551b523-cb23-4193-b8e9-927a7ee6f2f9">
+
+Issues worked on this sprint
+List the issues you completed this sprint
+- [X] User can view the login page
+- [X] User can also login as guest
+
+[Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+![Guest Login](https://github.com/user-attachments/assets/decdcddd-45be-4097-859d-6b7217fdf1e8)
 
 
 
