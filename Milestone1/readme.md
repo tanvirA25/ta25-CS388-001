@@ -197,7 +197,11 @@ Issue cards
 
 Issues worked on this sprint
 List the issues you completed this sprint
+- [X] User can view the login page
+- [X] User can also login as guest
+
 [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+![Guest Login](https://github.com/user-attachments/assets/decdcddd-45be-4097-859d-6b7217fdf1e8)
 
 
 
