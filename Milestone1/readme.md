@@ -181,6 +181,16 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
    <img width="1219" alt="389791289-217e0eac-183c-421c-b440-2968ba775838" src="https://github.com/user-attachments/assets/bfcf0214-5b5a-42af-8384-7087fa2eb65a">
 
 
+# Milestone 2 - Build Sprint 1 (Unit 8)
+GitHub Project board
+[<img width="1352" alt="Screenshot at Dec 02 22-06-15" src="https://github.com/user-attachments/assets/775de35c-0b1d-48da-8ef2-e4d4ca5ee2ca">] 
+
+Issue cards
+[Add screenshot of your Project Board with the issues that you've been working on for this unit's milestone] 
+[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
+Issues worked on this sprint
+List the issues you completed this sprint
+[Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
 
 
 
