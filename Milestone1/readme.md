@@ -65,7 +65,7 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
     - [ ] User can view the login page
     - [ ] User can login
     - [ ] User can create an account 
-    - [ ] User can also use as guest
+    - [ ] User can also login as guest
 
 **Optional Features**
 
