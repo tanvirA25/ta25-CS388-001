@@ -194,6 +194,8 @@ Issue cards
 [Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
 <img width="1434" alt="image" src="https://github.com/user-attachments/assets/0e963400-000b-4cda-b29c-866afe2b6402">
 <img width="1426" alt="image" src="https://github.com/user-attachments/assets/c551b523-cb23-4193-b8e9-927a7ee6f2f9">
+<img width="1614" alt="image" src="https://github.com/user-attachments/assets/4b8023ae-459c-4bcb-9732-7009e3dcf540">
+
 
 Issues worked on this sprint
 List the issues you completed this sprint
