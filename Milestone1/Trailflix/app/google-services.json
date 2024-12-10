@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1038023667346",
+    "project_id": "trailflix-database",
+    "storage_bucket": "trailflix-database.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038023667346:android:96b968835bf9c10559804b",
+        "android_client_info": {
+          "package_name": "com.example.trailflix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAT6-lk5f1aW1Axx8qP8VrzJb4U0GeKgLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

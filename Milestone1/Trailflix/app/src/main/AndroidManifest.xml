@@ -12,8 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrailFlix"
         tools:targetApi="31">
+        <activity android:name=".ProfileFragment" />
+        <activity android:name="TrailflixDetail" />
+        <activity android:name=".AuthenticationActivity" />
+        <activity android:name=".AccountActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".TrendingActivity" />
+
 
         <activity
             android:name=".MainActivity"
