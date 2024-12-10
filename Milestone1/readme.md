@@ -205,6 +205,39 @@ List the issues you completed this sprint
 [Add giphy that shows current build progress for Milestone 2. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
 ![Guest Login](https://github.com/user-attachments/assets/decdcddd-45be-4097-859d-6b7217fdf1e8)
 
+# Milestone 3 - Build Sprint 2 (Unit 9)
+GitHub Project board
+
+# Issue cards
+[Add screenshot of your Project Board with the updates issues that you've been working on for this unit's milestone] 
+<img width="1619" alt="image" src="https://github.com/user-attachments/assets/b3596549-1557-40ab-a423-293e571b897d">
+
+
+[Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
+<img width="1619" alt="image" src="https://github.com/user-attachments/assets/b3596549-1557-40ab-a423-293e571b897d">
+
+# Issues worked on this sprint
+List the issues you completed this sprint
+- [X] Display trending trailers in a carousel view.
+- [X] By clicking on it, shows the info and the trailer.
+- [X] On the bottom another carousel for tv shows.
+- [X] A search bar to filter out trailers based on the user query
+- [X] After the query, show the result in a carousel, and another for tv shows if it has the same name.
+- [X] By clicking on it, shows the info and the trailer.
+- [X] View email used to create an account if made.
+- [X] User can login
+- [X] User can create an account
+- [X] An add icon to view the option to add it to watchlist only if they have an account
+- [X] View the added trailers in list and can remove them if the user wants only if they have an account
+- [X] Able to view the info and the trailer when clicked on it  only if they have an account
+- [X] It will show the content in a coursel
+- [X] By clickin on it, it will show the info and the trailer
+
+[Add giphy that shows current build progress for Milestone 3. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+
+
+[Demo Day Prep Video]
+https://github.com/user-attachments/assets/6d03b8a5-aaf4-4c37-bcf7-a99a3dfe1fba
 
 
 
