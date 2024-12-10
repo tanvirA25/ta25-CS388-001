@@ -234,6 +234,8 @@ List the issues you completed this sprint
 - [X] By clickin on it, it will show the info and the trailer
 
 [Add giphy that shows current build progress for Milestone 3. Note: We will be looking for progression of work between Milestone 2 and 3. Make sure your giphys are not duplicated and clearly show the change from Sprint 1 to 2.]
+"https://github.com/user-attachments/assets/a4134096-c1f3-49d6-94b4-f600044d5a8f"
+
 
 
 [Demo Day Prep Video]
