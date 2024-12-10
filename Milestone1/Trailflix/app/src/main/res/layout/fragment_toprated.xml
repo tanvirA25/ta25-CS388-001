@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:id="@+id/login_layout">
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="264dp"
+        android:layout_height="45dp"
+        android:fontFamily="@font/ultra_regular"
+        android:text="TRAILFLIX"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043" />
+
+    <!-- Login Title -->
+    <TextView
+        android:id="@+id/trendingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Top-Rated"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/searchIcon"
+        android:layout_width="45dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.037"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <!-- Scrollable RelativeLayout -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/trendingTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Movies Text -->
+
+            <!-- Movies RecyclerView -->
+
+            <TextView
+                android:id="@+id/movieText"
+                android:layout_width="343dp"
+                android:layout_height="38dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="52dp"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingLeft="10dp"
+                android:text="Movies"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <!-- TV Shows Text -->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trendingMovies"
+                android:layout_width="382dp"
+                android:layout_height="311dp"
+                android:layout_below="@id/movieText"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="16dp"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvshowsText"
+                android:layout_width="336dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/trendingMovies"
+                android:fontFamily="@font/poppins_bold"
+                android:paddingLeft="10dp"
+                android:text="TV Shows"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <!-- TV Shows RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trendingTvShows"
+                android:layout_width="380dp"
+                android:layout_height="431dp"
+                android:layout_below="@id/tvshowsText"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="16dp"
+                android:nestedScrollingEnabled="false" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

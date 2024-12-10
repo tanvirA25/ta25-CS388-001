@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Add more items here -->
+<item
+    android:title="Trending"
+    android:id="@+id/nav_trending"
+    android:icon="@drawable/baseline_trending_up_24"
+    />
+
+    <item
+        android:title="Top-Rated"
+        android:id="@+id/nav_toprated"
+        android:icon="@drawable/baseline_upcoming_24"
+        />
+
+    <item
+        android:title="Wishlist"
+        android:id="@+id/nav_wishlist"
+        android:icon="@drawable/baseline_list_24"
+        />
+
+    <item
+        android:title="Profile"
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_person_24"
+        />
+
+
+
+
+</menu>
