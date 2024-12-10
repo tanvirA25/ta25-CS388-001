@@ -239,8 +239,7 @@ List the issues you completed this sprint
 
 
 [Demo Day Prep Video]
-[https://github.com/user-attachments/assets/6d03b8a5-aaf4-4c37-bcf7-a99a3dfe1fba]([https://github.com/user-attachments/assets/e34e16c2-83cd-4932-89c2-1226b4339c9a](https://youtube.com/shorts/Wr3IwmYTkTI?feature=share))
-
+https://youtube.com/shorts/Wr3IwmYTkTI?feature=share
 
 
 
