@@ -44,6 +44,11 @@ class AccountFragment : Fragment() {
                 Toast.makeText(context, "Please enter email and password", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.loginButton2.setOnClickListener {
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            requireActivity().finish()
+        }
         return binding.root
     }
 

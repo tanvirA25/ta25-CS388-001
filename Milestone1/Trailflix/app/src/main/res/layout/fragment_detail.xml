@@ -147,12 +147,10 @@
 
             <TextView
                 android:id="@+id/writersText"
-                android:layout_width="251dp"
-                android:layout_height="33dp"
-                android:layout_alignParentStart="true"
+                android:layout_width="96dp"
+                android:layout_height="26dp"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="89dp"
-                android:layout_marginEnd="87dp"
+                android:layout_marginEnd="141dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="Writer"
                 android:textAlignment="center"
@@ -168,7 +166,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="12dp"
                 android:ellipsize="none"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_bold"
                 android:gravity="start"
                 android:inputType="textMultiLine"
                 android:lineSpacingExtra="2dp"
@@ -182,7 +180,7 @@
             <TextView
                 android:id="@+id/writers"
                 android:layout_width="344dp"
-                android:layout_height="80dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/writersText"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="4dp"
@@ -201,6 +199,14 @@
                 android:layout_marginEnd="0dp"
                 android:layout_toStartOf="@+id/ratingText"
                 app:srcCompat="@drawable/baseline_star_24" />
+
+            <Button
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="21dp"
+                android:text="SHARE" />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>

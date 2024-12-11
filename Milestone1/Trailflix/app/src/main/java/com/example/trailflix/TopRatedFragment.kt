@@ -1,11 +1,11 @@
 package com.example.trailflix
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -16,6 +16,7 @@ import com.codepath.asynchttpclient.RequestParams
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.example.flixter.TrailflixAdapter
 import com.example.trailflix.databinding.FragmentTopratedBinding
+import com.example.trailflix.databinding.FragmentTrendingBinding
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import okhttp3.Headers
@@ -36,20 +37,22 @@ class TopRatedFragment : Fragment(), OnListFragmentInteractionListener {
             (activity as? MainActivity)?.searchPage()
         }
 
+
+
         // Set up RecyclerViews
         binding.trendingMovies.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         binding.trendingTvShows.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        // Load data for movies and TV shows
-        loadTopRatedData(
+        // Load data
+        loadTrendingData(
             "https://api.themoviedb.org/3/movie/top_rated",
             binding.progressBar,
             binding.trendingMovies,
             "Movies"
         )
-        loadTopRatedData(
+        loadTrendingData(
             "https://api.themoviedb.org/3/tv/top_rated",
             binding.progressBar,
             binding.trendingTvShows,
@@ -59,12 +62,7 @@ class TopRatedFragment : Fragment(), OnListFragmentInteractionListener {
         return binding.root
     }
 
-    private fun loadTopRatedData(
-        url: String,
-        progressBar: ProgressBar,
-        recyclerView: RecyclerView,
-        contentType: String
-    ) {
+    private fun loadTrendingData(url: String, progressBar: ProgressBar, recyclerView: RecyclerView, contentType: String) {
         progressBar.visibility = View.VISIBLE
 
         val client = AsyncHttpClient()
@@ -77,24 +75,32 @@ class TopRatedFragment : Fragment(), OnListFragmentInteractionListener {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
                 progressBar.visibility = View.GONE
 
-                val resultsJSON: JSONArray = json.jsonObject.getJSONArray("results")
-                val gson = Gson()
-                val arrayMovietype = object : TypeToken<List<TrailflixItem>>() {}.type
-                val models: List<TrailflixItem> =
-                    gson.fromJson(resultsJSON.toString(), arrayMovietype)
+                try {
+                    val resultsJSON: JSONArray = json.jsonObject.getJSONArray("results")
+                    Log.d("TopRatedFragment", "API Response: ${resultsJSON.toString()}")
 
-                recyclerView.adapter =
-                    TrailflixAdapter(requireContext(), models, this@TopRatedFragment)
+                    val gson = Gson()
+                    val arrayMovietype = object : TypeToken<List<TrailflixItem>>() {}.type
+                    val models: List<TrailflixItem> =
+                        gson.fromJson(resultsJSON.toString(), arrayMovietype)
 
-                Log.d("TopRatedFragment", "$contentType loaded successfully")
+                    models.forEach { item ->
+                        Log.d("TopRatedFragment", "Parsed item: id=${item.id}, title=${item.title}")
+                        Log.d("TopRatedFragment", "Parsed item: id=${item.id}, title=${item.name}")
+                    }
+
+                    recyclerView.adapter =
+                        TrailflixAdapter(requireContext(), models, this@TopRatedFragment, false)
+
+                    Log.d("TopRatedFragment", "$contentType loaded successfully")
+                } catch (e: Exception) {
+                    Log.e("TopRatedFragment", "Parsing error for $contentType", e)
+                    Log.d("TopRatedFragment", "Starting API call...")
+                    Log.d("TopRatedFragment", "Saving to Firestore...")
+                }
             }
 
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                errorResponse: String,
-                t: Throwable?
-            ) {
+            override fun onFailure(statusCode: Int, headers: Headers?, errorResponse: String, t: Throwable?) {
                 progressBar.visibility = View.GONE
                 Log.e("TopRatedFragment", "Error loading $contentType: $errorResponse", t)
             }
@@ -107,12 +113,9 @@ class TopRatedFragment : Fragment(), OnListFragmentInteractionListener {
     }
 
     override fun onItemClick(item: TrailflixItem) {
-        Log.d("TopRatedFragment", "Movie clicked: id=${item.id}, title=${item.title}")
-
-        val intent = Intent(requireContext(), TrailflixDetail::class.java).apply {
-            putExtra("CONTENT_ID", item.id.toString()) // Pass movieId or tvShowId
-            putExtra("CONTENT_TYPE", "movie") // Pass type based on the item
-        }
-        startActivity(intent)
+        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+    }
+    override fun onDeleteItem(item: TrailflixItem) {
+        // No action needed in TopRatedFragment for delete
     }
 }

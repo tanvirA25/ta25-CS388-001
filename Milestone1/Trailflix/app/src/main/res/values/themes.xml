@@ -1,18 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme -->
     <style name="Base.Theme.TrailFlix" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- Customize your light theme here -->
         <item name="colorPrimary">@color/red</item>
-
-
-
-
-
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorAccent">@color/red</item>
+        <item name="colorControlActivated">@color/red</item> <!-- Active state for controls -->
+        <item name="colorSwitchThumbNormal">@color/white</item> <!-- Normal thumb color -->
     </style>
+
+    <!-- Checkbox and similar controls -->
     <style name="colored_checkBox" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-    <item name="colorAccent">@color/red</item>
+        <item name="colorAccent">@color/red</item>
     </style>
 
+    <!-- Application theme -->
     <style name="Theme.TrailFlix" parent="Base.Theme.TrailFlix" />
 </resources>

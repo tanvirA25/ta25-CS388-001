@@ -16,6 +16,23 @@ class TrailflixRepository(context: Context) {
     private val auth = FirebaseAuth.getInstance()
     private val tag = "TrailflixRepository"
 
+    companion object {
+        const val MOVIE_LIST = "movieList"
+        const val TV_SHOW_LIST = "tvShowList"
+        const val TRAILFLIX_COLLECTION = "trailflix"
+    }
+
+    private suspend fun addToFirestore(collection: String, data: Map<String, Any>): Boolean = withContext(Dispatchers.IO) {
+        return@withContext try {
+            firestore.collection(collection).add(data).await()
+            Log.d(tag, "Data added successfully to $collection")
+            true
+        } catch (e: Exception) {
+            Log.e(tag, "Error adding data to $collection: ${e.message}", e)
+            false
+        }
+    }
+
 
     suspend fun addToMovieList(movieId: String, title: String) = withContext(Dispatchers.IO){
         val userId = FirebaseAuth.getInstance().currentUser?.uid

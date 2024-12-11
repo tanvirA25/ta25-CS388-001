@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,16 +42,16 @@ class WishlistFragment : Fragment(), OnListFragmentInteractionListener {
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
         // Load wishlist data
-        loadWishlistData("movieList", binding.trendingMovies, "movie")
-        loadWishlistData("tvShowList", binding.trendingTvShows, "tv")
+        loadWatchListData("movieList", binding.trendingMovies, "movie")
+        loadWatchListData("tvShowList", binding.trendingTvShows, "tv")
 
         return binding.root
     }
 
-    private fun loadWishlistData(collection: String, recyclerView: RecyclerView, contentType: String) {
+    private fun loadWatchListData(collection: String, recyclerView: RecyclerView, contentType: String) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
         if (userId == null) {
-            Log.e("WishlistFragment", "User is not logged in")
+            Toast.makeText(requireContext(), "User is not logged in", Toast.LENGTH_SHORT).show()
             return
         }
 
@@ -62,17 +63,17 @@ class WishlistFragment : Fragment(), OnListFragmentInteractionListener {
             .addOnSuccessListener { documents ->
                 binding.progressBar.visibility = View.GONE
 
-                // Check if the Firestore collection is empty
                 if (documents.isEmpty) {
+                    // Hide only the specific RecyclerView and header
                     if (contentType == "movie") {
-                        binding.trendingMovies.visibility = View.GONE // Hide RecyclerView
-                        binding.movieText.visibility = View.GONE // Hide the header (if exists)
+                        binding.trendingMovies.visibility = View.GONE
+                        binding.movieText.visibility = View.GONE
                     } else if (contentType == "tv") {
                         binding.trendingTvShows.visibility = View.GONE
                         binding.tvshowsText.visibility = View.GONE
                     }
+                    recyclerView.adapter = null // Clear the adapter to avoid residual data
                 } else {
-                    // Extract movie or TV show IDs and fetch details from TMDB
                     val items = mutableListOf<TrailflixItem>()
                     for (document in documents) {
                         val id = document.getString("movieId") ?: document.getString("tvShowId")
@@ -80,8 +81,12 @@ class WishlistFragment : Fragment(), OnListFragmentInteractionListener {
                             fetchDetails(id, contentType) { item ->
                                 if (item != null) {
                                     items.add(item)
-                                    recyclerView.adapter =
-                                        TrailflixAdapter(requireContext(), items, this)
+
+                                    // Set the adapter with updated items
+                                    recyclerView.adapter = TrailflixAdapter(requireContext(), items, this, true)
+                                    recyclerView.visibility = View.VISIBLE
+                                    if (contentType == "movie") binding.movieText.visibility = View.VISIBLE
+                                    if (contentType == "tv") binding.tvshowsText.visibility = View.VISIBLE
                                 }
                             }
                         }
@@ -93,6 +98,7 @@ class WishlistFragment : Fragment(), OnListFragmentInteractionListener {
                 Log.e("WishlistFragment", "Error loading wishlist from Firestore", e)
             }
     }
+
     private fun fetchDetails(id: String, contentType: String, callback: (TrailflixItem?) -> Unit) {
         val url = "https://api.themoviedb.org/3/$contentType/$id"
         val params = RequestParams()
@@ -111,12 +117,60 @@ class WishlistFragment : Fragment(), OnListFragmentInteractionListener {
                 }
             }
 
+
+
+
+
             override fun onFailure(statusCode: Int, headers: Headers?, errorResponse: String, t: Throwable?) {
                 Log.e("WishlistFragment", "Error fetching details from TMDB", t)
                 callback(null)
             }
         })
     }
+
+    override fun onDeleteItem(item: TrailflixItem) {
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId == null) {
+            Toast.makeText(requireContext(), "User is not logged in", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val collection = if (item.name != null) "tvShowList" else "movieList"
+        val idField = if (item.name != null) "tvShowId" else "movieId"
+
+        firestore.collection(collection)
+            .whereEqualTo("userId", userId)
+            .whereEqualTo(idField, item.id.toString())
+            .get()
+            .addOnSuccessListener { documents ->
+                if (documents.isEmpty) {
+                    Toast.makeText(requireContext(), "Item not found in Firestore", Toast.LENGTH_SHORT).show()
+                } else {
+                    for (document in documents) {
+                        firestore.collection(collection).document(document.id).delete()
+                            .addOnSuccessListener {
+                                Toast.makeText(requireContext(), "Item deleted successfully", Toast.LENGTH_SHORT).show()
+
+                                // Reload only the affected list
+                                if (collection == "movieList") {
+                                    loadWatchListData("movieList", binding.trendingMovies, "movie")
+                                } else if (collection == "tvShowList") {
+                                    loadWatchListData("tvShowList", binding.trendingTvShows, "tv")
+                                }
+                            }
+                            .addOnFailureListener { e ->
+                                Log.e("WishlistFragment", "Error deleting item", e)
+                                Toast.makeText(requireContext(), "Failed to delete item", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                }
+            }
+            .addOnFailureListener { e ->
+                Log.e("WishlistFragment", "Error finding item to delete", e)
+                Toast.makeText(requireContext(), "Failed to find item", Toast.LENGTH_SHORT).show()
+            }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

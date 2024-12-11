@@ -80,7 +80,7 @@ class TrendingFragment : Fragment(), OnListFragmentInteractionListener {
                     gson.fromJson(resultsJSON.toString(), arrayMovietype)
 
                 recyclerView.adapter =
-                    TrailflixAdapter(requireContext(), models, this@TrendingFragment)
+                    TrailflixAdapter(requireContext(), models, this@TrendingFragment, false)
 
                 Log.d("TrendingFragment", "$contentType loaded successfully")
             }
@@ -99,5 +99,9 @@ class TrendingFragment : Fragment(), OnListFragmentInteractionListener {
 
     override fun onItemClick(item: TrailflixItem) {
         Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+    }
+
+    override fun onDeleteItem(item: TrailflixItem) {
+        // No action needed in TopRatedFragment for delete
     }
 }

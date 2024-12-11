@@ -10,6 +10,21 @@
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="23dp">
 
+    <Button
+        android:id="@+id/loginButton2"
+        android:layout_width="333dp"
+        android:layout_height="53dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Login"
+        app:cornerRadius="7dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.837" />
+
     <EditText
         android:id="@+id/editTextPasswordAccount"
         android:layout_width="329dp"

@@ -1,9 +1,11 @@
 package com.example.trailflix
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.webkit.WebView
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -34,7 +36,12 @@ class TrailflixDetail : AppCompatActivity() {
         setContentView(R.layout.fragment_detail)
 
         val movie = intent.getStringExtra(MOVIE_EXTRA)
-        content = Gson().fromJson(movie, TrailflixItem::class.java)
+        if (movie != null) {
+            content = Gson().fromJson(movie, TrailflixItem::class.java)
+            Log.d("Toprated", "Received movie: id=${content.id}, title=${content.title}")
+        } else {
+            Log.e(TAG, "Movie data is null!")
+        }
 
         val id = content.id.toString()
 
@@ -57,85 +64,106 @@ class TrailflixDetail : AppCompatActivity() {
         val add = findViewById<ImageView>(R.id.add)
         add.setOnClickListener {
             val type = content.media_type
-            if (type != null) {
-                addToWishlist(content, type)
+            if (type == null) {
+                if (!title.isNullOrEmpty()){
+                    addToWatchList(content, "movie")
+                }
+                if (!content.name.isNullOrEmpty()){
+                    addToWatchList(content, "tv")
+                }
             }
+            else {
+                addToWatchList(content, type)
+            }
+
         }
+        val share = findViewById<Button>(R.id.sharebutton)
+        share.setOnClickListener {
+            shareTrailer(content)
+        }
+
 
 
     }
 
-    private fun addToWishlist(content: TrailflixItem, type:String){
-        val userId = FirebaseAuth.getInstance().currentUser?.uid
-        if (userId == null) {
-            Toast.makeText(this, "User is not logged in", Toast.LENGTH_SHORT).show()
-            return
+        private fun addToWatchList(content: TrailflixItem, type: String) {
+            val userId = FirebaseAuth.getInstance().currentUser?.uid
+            if (userId == null) {
+                Toast.makeText(this, "User is not logged in", Toast.LENGTH_SHORT).show()
+                return
+            }
+
+            val repository = TrailflixRepository(this)
+            lifecycleScope.launch {
+                try {
+                    // Always use original_title when available
+                    val title = content.title ?: content.name ?: "Unknown Title"
+
+                    val isAdded = if (type == "movie") {
+                        repository.addToMovieList(content.id.toString(), title)
+                    } else if (type == "tv") {
+                        repository.addToTvShowList(
+                            content.id.toString(),
+                            content.name ?: "Unknown Title"
+                        )
+                    } else {
+                        false
+                    }
+
+                    if (isAdded) {
+                        Toast.makeText(this@TrailflixDetail, "Added to $type list!", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@TrailflixDetail, "$type already exists in the list!", Toast.LENGTH_SHORT).show()
+                    }
+                } catch (e: Exception) {
+                    Log.e("TrailflixDetail", "Failed to add $type to list: ${e.message}", e)
+                    Toast.makeText(this@TrailflixDetail, "Failed to add to $type list.", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
-        val repository = TrailflixRepository(this)
-        lifecycleScope.launch {
-            try {
-                val isAdded = if (type == "movie") {
-                    repository.addToMovieList(content.id.toString(), content.title.toString())
-                } else if (type == "tv") {
-                    repository.addToTvShowList(content.id.toString(), content.name ?: "Unknown Title")
-                } else {
-                    false
+
+        private fun fetchTrailer(type: String, movieId: String) {
+            val webView = findViewById<WebView>(R.id.webView) // Ensure your layout includes this WebView
+            val titleView = findViewById<TextView>(R.id.movie_title)
+            val client = AsyncHttpClient()
+            val params = RequestParams()
+            params["api_key"] = BuildConfig.api_key
+
+            val url = "https://api.themoviedb.org/3/$type/$movieId/videos"
+
+            client.get(url, params, object : JsonHttpResponseHandler() {
+                override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
+                    val resultsJSON = json.jsonObject.getJSONArray("results")
+                    if (resultsJSON.length() > 0) {
+                        val trailerKey = resultsJSON.getJSONObject(0).getString("key")
+                        content.trailer_key = trailerKey // Set the trailer key
+                        val videoUrl = "https://www.youtube.com/embed/$trailerKey"
+
+                        // Configure WebView
+                        webView.settings.javaScriptEnabled = true
+                        webView.setBackgroundColor(Color.TRANSPARENT)
+                        webView.settings.loadWithOverviewMode = true
+                        webView.settings.useWideViewPort = true
+                        webView.loadUrl(videoUrl)
+
+                        // Use `title` or `name` based on the type
+                        titleView.text = if (type == "movie") content.title else content.name
+                    } else {
+                        Log.e(TAG, "No trailers found for $type.")
+                    }
                 }
 
-                if (isAdded) {
-                    Toast.makeText(this@TrailflixDetail, "Added to $type list!", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(this@TrailflixDetail, "$type already exists in the list!", Toast.LENGTH_SHORT).show()
+                override fun onFailure(
+                    statusCode: Int,
+                    headers: Headers?,
+                    errorResponse: String,
+                    t: Throwable?
+                ) {
+                    Log.e(TAG, "Error loading $type trailers: $errorResponse", t)
                 }
-            } catch (e: Exception) {
-                Log.e("TrailflixDetail", "Failed to add $type to list: ${e.message}", e)
-                Toast.makeText(this@TrailflixDetail, "Failed to add to $type list.", Toast.LENGTH_SHORT).show()
-            }
+            })
         }
-    }
-
-    private fun fetchTrailer(type: String, movieId: String) {
-        val webView = findViewById<WebView>(R.id.webView) // Ensure your layout includes this WebView
-        val titleView = findViewById<TextView>(R.id.movie_title)
-        val client = AsyncHttpClient()
-        val params = RequestParams()
-        params["api_key"] = BuildConfig.api_key
-
-        val url = "https://api.themoviedb.org/3/$type/$movieId/videos"
-
-
-        client.get(url, params, object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                val resultsJSON = json.jsonObject.getJSONArray("results")
-                if (resultsJSON.length() > 0) {
-                    val trailerKey = resultsJSON.getJSONObject(0).getString("key")
-                    val videoUrl = "https://www.youtube.com/embed/$trailerKey"
-
-                    // Configure WebView
-                    webView.settings.javaScriptEnabled = true
-                    webView.setBackgroundColor(Color.TRANSPARENT)
-                    webView.settings.loadWithOverviewMode = true
-                    webView.settings.useWideViewPort = true
-                    webView.loadUrl(videoUrl)
-
-                    // Use `title` or `name` based on the type
-                    titleView.text = if (type == "movie") content.title else content.name
-                } else {
-                    Log.e(TAG, "No trailers found for $type.")
-                }
-            }
-
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                errorResponse: String,
-                t: Throwable?
-            ) {
-                Log.e(TAG, "Error loading $type trailers: $errorResponse", t)
-            }
-        })
-    }
     private fun fetchActors(type: String, movieId: String) {
         val recyclerView = findViewById<RecyclerView>(R.id.actor)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
@@ -273,6 +301,8 @@ class TrailflixDetail : AppCompatActivity() {
                 }
             }
 
+
+
             override fun onFailure(
                 statusCode: Int,
                 headers: Headers?,
@@ -284,6 +314,27 @@ class TrailflixDetail : AppCompatActivity() {
         })
     }
 
+    private fun shareTrailer(content: TrailflixItem) {
 
-}
+
+        if (content.trailer_key.isNullOrEmpty()) {
+            Toast.makeText(this, "Trailer not available to share", Toast.LENGTH_SHORT).show()
+            Log.e(TAG, "trailer_key is null or empty")
+            return
+        }
+
+        val trailerUrl = "https://www.youtube.com/watch?v=${content.trailer_key}"
+
+        val shareIntent = Intent(Intent.ACTION_SEND).apply {
+            type = "text/plain"
+            putExtra(Intent.EXTRA_SUBJECT, "Check out this trailer!")
+            putExtra(Intent.EXTRA_TEXT, "Hey, check out this amazing trailer: $trailerUrl")
+        }
+
+        startActivity(Intent.createChooser(shareIntent, "Share trailer via"))
+    }
+
+
+
+        }
 
