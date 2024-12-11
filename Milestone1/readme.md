@@ -255,8 +255,8 @@ https://youtube.com/shorts/Wr3IwmYTkTI?feature=share
 
 ## Challenges and fixes
 
-- Intially I wanted to have an page for upcoming contents but due to api issue that was chagned witht the optional feature top rated conttent.
-- The app required to list management which is why search and optional feature of watchlist was taken and impleneted.
+- Intially I wanted to have an page for upcoming contents but due to api issue that was chagned witht the optional feature top rated content.
+- The app required to do a list management which is why optional feature of watchlist was taken and implemented.
 - Additoinaly notification system, and custom setting for notifcation, and social sharing was added to fulfill the requirement and enhance the app.
 - Intiall planning for editing personal info was scrapped to add the optional features.
 
