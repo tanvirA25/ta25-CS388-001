@@ -147,4 +147,41 @@
         app:layout_constraintVertical_bias="0.043" />
 
 
+    <TextView
+        android:id="@+id/notificationText"
+        android:layout_width="184dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Notification"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.548" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swOnOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/poppins_bold"
+        android:showText="true"
+        android:textColor="@color/white"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="14sp"
+        android:thumb="@drawable/custom_thumb"
+        android:track="@drawable/custom_track"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

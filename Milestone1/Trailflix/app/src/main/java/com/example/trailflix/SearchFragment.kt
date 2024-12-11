@@ -135,7 +135,7 @@ class SearchFragment: Fragment(), OnListFragmentInteractionListener {
 
     private fun updateRecyclerViews(movies: List<TrailflixItem>, tvShows: List<TrailflixItem>) {
         if (movies.isNotEmpty()) {
-            binding.trendingMovies.adapter = TrailflixAdapter(requireContext(), movies, this)
+            binding.trendingMovies.adapter = TrailflixAdapter(requireContext(), movies, this, false)
             binding.trendingMovies.visibility = View.VISIBLE
             binding.movieText.visibility = View.VISIBLE
         } else {
@@ -144,7 +144,7 @@ class SearchFragment: Fragment(), OnListFragmentInteractionListener {
         }
 
         if (tvShows.isNotEmpty()) {
-            binding.trendingTvShows.adapter = TrailflixAdapter(requireContext(), tvShows, this)
+            binding.trendingTvShows.adapter = TrailflixAdapter(requireContext(), tvShows, this, false)
             binding.trendingTvShows.visibility = View.VISIBLE
             binding.tvshowsText.visibility = View.VISIBLE
         } else {
@@ -160,5 +160,8 @@ class SearchFragment: Fragment(), OnListFragmentInteractionListener {
 
     override fun onItemClick(item: TrailflixItem) {
         Toast.makeText(context, "Selected: ${item.title ?: item.name}", Toast.LENGTH_SHORT).show()
+    }
+    override fun onDeleteItem(item: TrailflixItem) {
+        // No action needed in TopRatedFragment for delete
     }
 }

@@ -15,7 +15,7 @@
         />
 
     <item
-        android:title="Wishlist"
+        android:title="Watchlist"
         android:id="@+id/nav_wishlist"
         android:icon="@drawable/baseline_list_24"
         />

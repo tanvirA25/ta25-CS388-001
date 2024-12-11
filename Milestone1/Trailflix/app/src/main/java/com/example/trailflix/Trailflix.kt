@@ -22,6 +22,7 @@ class TrailflixItem {
         @SerializedName("title")
         var title: String? = null
 
+
         @SerializedName("original_name")
         var name: String? = null
 

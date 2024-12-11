@@ -88,6 +88,8 @@ dependencies {
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.6.0"))
     implementation("com.google.firebase:firebase-firestore-ktx:24.5.0")
+    implementation ("androidx.work:work-runtime-ktx:2.8.1")
+    implementation ("com.facebook.android:facebook-android-sdk:latest.release")
 
     // Firebase SDKs
     implementation("com.google.firebase:firebase-analytics")
