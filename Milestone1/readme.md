@@ -208,7 +208,7 @@ List the issues you completed this sprint
 # Milestone 3 - Build Sprint 2 (Unit 9)
 GitHub Project board
 
-# Issue cards
+## Issue cards
 [Add screenshot of your Project Board with the updates issues that you've been working on for this unit's milestone] 
 <img width="1619" alt="image" src="https://github.com/user-attachments/assets/b3596549-1557-40ab-a423-293e571b897d">
 
@@ -216,7 +216,7 @@ GitHub Project board
 [Add screenshot of your Project Board with the issues that you're working on in the NEXT sprint. It should include issues for next unit with assigned owners.] 
 <img width="1619" alt="image" src="https://github.com/user-attachments/assets/b3596549-1557-40ab-a423-293e571b897d">
 
-# Issues worked on this sprint
+## Issues worked on this sprint
 List the issues you completed this sprint
 - [X] Display trending trailers in a carousel view.
 - [X] By clicking on it, shows the info and the trailer.
@@ -242,7 +242,25 @@ List the issues you completed this sprint
 https://youtube.com/shorts/Wr3IwmYTkTI?feature=share
 
 
+
 # Milestone 4 - Demo Day (Unit 10)
+
+## Issue cards
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/a65fff30-330e-4f01-897f-756fda845006">
+
+# Issues worked on this sprint
+- [X] Notification to get daily reminder on watchlist
+- [X] Social Media Sharing
+- [X] Customization, the ability to turn on off notifications by a switch in profile page
+
+## Challenges and fixes
+
+- Intially I wanted to have an page for upcoming contents but due to api issue that was chagned witht the optional feature top rated conttent.
+- The app required to list management which is why search and optional feature of watchlist was taken and impleneted.
+- Additoinaly notification system, and custom setting for notifcation, and social sharing was added to fulfill the requirement and enhance the app.
+- Intiall planning for editing personal info was scrapped to add the optional features.
+
+## Challenges and fixes
 [https://docs.google.com/presentation/d/1PZn2ikCvzBJ7Y-Npf9n1jWmLzBSGYQCy1iCWm1jC-Qk/edit#slide=id.g2d6b01e3396_0_34](https://docs.google.com/presentation/d/1PZn2ikCvzBJ7Y-Npf9n1jWmLzBSGYQCy1iCWm1jC-Qk/edit#slide=id.g35f391192_00)
 
 
