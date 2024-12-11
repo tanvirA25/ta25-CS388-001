@@ -45,26 +45,26 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
 **Required Features**
 
 1. Trending Page (Home Page)
-    - [ ] Display trending trailers in a carousel view.
-    - [ ] By clicking on it, shows the info and the trailer.
-    - [ ] On the bottom another carousel for tv shows.
+    - [X] Display trending trailers in a carousel view.
+    - [X] By clicking on it, shows the info and the trailer.
+    - [X] On the bottom another carousel for tv shows.
 2. Upcoming Page
     - [ ] Display upcoming trailers in a carousel view.
     - [ ] By clicking on it shows the info and the trailer.
     - [ ] On the bottom another carousel for tv shows.
 3. Search Page
-    - [ ] A search bar to filter out trailers based on the user query
-    - [ ] After the query, show the result in a carousel, and another for tv shows if it has the same name.
-    - [ ] By clicking on it, shows the info and the trailer.
+    - [X] A search bar to filter out trailers based on the user query
+    - [X] After the query, show the result in a carousel, and another for tv shows if it has the same name.
+    - [X] By clicking on it, shows the info and the trailer.
     
 4. Account Page
-    - [ ] View email used to create an account if made.
+    - [X] View email used to create an account if made.
     - [ ] Options to change password, email, and info.
     - [ ] Settings options to change notifications, and age restriction.
 5. Login Page
     - [X] User can view the login page
-    - [ ] User can login
-    - [ ] User can create an account 
+    - [X] User can login
+    - [X] User can create an account 
     - [X] User can also login as guest
 
 **Optional Features**
@@ -73,15 +73,15 @@ The audio experience is enhanced with trailers’ soundtracks, while real-time d
     - [ ] By clicking on the streaming platform icon it will open the content in that platform.
     
 2. Add trailers to watchlist
-    - [ ] An add icon to view the option to add it to watchlist only if they have an account
+    - [X] An add icon to view the option to add it to watchlist only if they have an account
     
 3. Watchlist Page
-    - [ ] View the added trailers in list and can remove them if the user wants only if they have an account
-    - [ ] Able to view the info and the trailer when clicked on it  only if they have an account
+    - [X] View the added trailers in list and can remove them if the user wants only if they have an account
+    - [X] Able to view the info and the trailer when clicked on it  only if they have an account
     
 4. Page for highest rated content of all time
-    - [ ] It will show the content in a coursel
-    - [ ] By clickin on it, it will show the info and the trailer
+    - [X] It will show the content in a coursel
+    - [X] By clickin on it, it will show the info and the trailer
     
 ### 2. Screen Archetypes
 
